@@ -1,3 +1,10 @@
+/**
+ * @author     David Hickox
+ * @license    This project is released under the Free For Personal Use Licence (FFP)
+ * @copyright  Copyright (c) 2017 David HIckox
+ * @date       Jan 2017
+ */
+
 #include <FastLED.h>
 #include "FastLED.h"
 
@@ -16,6 +23,7 @@ uint8_t max_bright = 30;
 char letter = ' ';
 char letter1 = ' ';
 char letter2 = ' ';
+int stylesave = 0;
 
 struct CRGB leds[NUM_LEDS];
 
@@ -172,60 +180,100 @@ void colorpick() {
     {
       colour = CRGB::White;
       Serial.println("Colour changed to White");
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'b')
     {
       colour = CRGB::Blue;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'y')
     {
       colour = CRGB::Yellow;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'r')
     {
       colour = CRGB::Red;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'g')
     {
       colour = CRGB::Green;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'l')
     {
       colour = CRGB::LimeGreen;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'p')
     {
       colour = CRGB::Purple;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'o')
     {
       colour = CRGB::Orange;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'k')
     {
       colour = CRGB::Black;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'n')
     {
       colour = CRGB::Brown;
+      if (stylesave > 0)
+      {
+        style = stylesave;
+      }
       letter = ' ';
       letter1 = ' ';
     }
@@ -255,30 +303,35 @@ void stylepick() {
     if (letter1 == 's')
     {
       style = 1;
+      stylesave = 1;
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 't')
     {
       style = 2;
+      stylesave = 2;
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'r')
     {
       style = 3;
+      stylesave = 3;
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'f')
     {
       style = 4;
+      stylesave = 4;
       letter = ' ';
       letter1 = ' ';
     }
     else if (letter1 == 'o')
     {
       style = 0;
+      stylesave = 0;
       letter = ' ';
       letter1 = ' ';
     }
