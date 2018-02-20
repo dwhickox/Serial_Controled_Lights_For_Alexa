@@ -1,6 +1,6 @@
 /**
  * @author     David Hickox
- * @license    This project is released under the Free For Personal Use Licence (FFP)
+ * @license    This project is released under the CC by-nc-sa 4.0 license
  * @copyright  Copyright (c) 2017 David HIckox
  * @date       Jan 2017
  */
